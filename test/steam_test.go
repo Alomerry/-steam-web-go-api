@@ -3,7 +3,7 @@ package test
 import (
 	"context"
 	"fmt"
-	steam "github.com/Alomerry/steam-web-go-api"
+	steam "github.com/alomerry/steam-web-go-api"
 	"testing"
 )
 
