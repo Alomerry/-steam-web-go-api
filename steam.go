@@ -32,6 +32,10 @@ func (s *SteamClient) GetIUserStats() *UserStatsInterface {
 	return &UserStatsInterface{sc: s}
 }
 
+func (s *SteamClient) GetIUser() *UserInterface {
+	return &UserInterface{sc: s}
+}
+
 func (i *_interface) execute(ctx context.Context, endpoint string, response interface{}) error {
 	endpoint = fmt.Sprintf("%s/%s", STEAM_WEB_API_DOMAIN, endpoint)
 	r, err := i.sc.client.Get(endpoint)
